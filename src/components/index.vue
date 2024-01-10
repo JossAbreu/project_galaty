@@ -72,13 +72,13 @@ setTimeout(() => {
 </script>
 
 <template> 
-  <section class="w-screen h-screen flex justify-center items-center object-cover   bg-no-repeat bg-bottom bg-cover fixed " style="background-image: url('/background.png');" >
-   <div class="fixed bg-black opacity-20 inset-0 h-full w-full "></div>
+  <section class="w-screen h-screen flex justify-center items-center object-cover   bg-no-repeat bg-bottom bg-cover fixed " style="background-image: url('/background.png'); select-none" >
+   <div class="fixed bg-black opacity-20 inset-0 h-full w-full  select-none"></div>
 
       
       <vue-typewriter-effect
       xyz="fade duration-20 small-100% ease-in-out-back"
-      class="bottom-[24rem] text-stone-800 relative text-[8rem] font-custom tracking-widest z-30 opacity-50 xyz-in"
+      class="bottom-[24rem] select-none text-stone-800 relative text-[8rem] font-custom tracking-widest z-30 opacity-50 xyz-in"
       :strings="['Galaxy age']"
        :loop="true"
        :deleteSpeed="700"
@@ -89,7 +89,7 @@ setTimeout(() => {
       <img ref="Img_f1" v-if="ObjectsEnable" xyz="fade duration-30 down-100% back-5 small-75%" src="/f1.png" alt="img_f1" class="w-[100dvw] h-[30dvh] object-left-top mb-[25dvw] ml-[35dvw] object-contain  fixed z-30 xyz-in">
       <img ref="Img_f2" v-if="ObjectsEnable" xyz="fade duration-30 down-100% small-75%   skew-right-5 " src="/f2.png" alt="img_f2" class="w-[100dvw] h-[15dvh] object-right-top mb-[10dvw] mr-[35dvw] object-contain  fixed z-30 xyz-in">
   </section>
-  <div xyz="fade duration-30"  ref="particles"  id="particles-js" class="xyz-in w-[100dvw] h-[100dvw] fixed inset-0 z-40  "></div>
+  <div xyz="fade duration-30"  ref="particles"  id="particles-js" class="xyz-in w-[100dvw] h-[100dvw] fixed inset-0 z-40 select-none "></div>
 </template>
 
 
