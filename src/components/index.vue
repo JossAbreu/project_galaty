@@ -101,7 +101,7 @@ Enable_Z_index.value = true;
 setTimeout(() => {
     ObjectsEnable.value = true;
     setTimeout(() => {
-        randomValues(Img_f2.value, 3000);  // Duración de 4000 ms para Img_f2
+        randomValues(Img_f2.value, 2000);  // Duración de 4000 ms para Img_f2
         randomValues(Img_f1.value, 4000);  // Duración de 3000 ms para Img_f1
     }, 1000);
 }, 800);
@@ -147,7 +147,7 @@ function randomValues(target, duration) {
         <img ref="head"  xyz="fade duration-10 down-100%   "  src="/images/head.png"   alt="img_robot" class="w-[100dvw] h-[37dvh] object-center-bottom    object-contain mb-[12.7dvw] fixed z-0 xyz-in  ">
         <img ref="body" xyz="fade duration-10 down-100%   " src="/images/body.png"  alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[1.2dvw]  object-contain  mb-[7.2dvw] fixed z-50  xyz-in ">
         <img ref="leg_left" xyz="fade duration-10 down-100%    "   :class="Enable_Z_index? 'z-50':'z-30'"   src="/images/leg_left.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  right-[0] mr-[2dvw]  object-contain  mb-[7.4dvw] fixed xyz-in  ">
-        <img ref="leg_right" xyz="fade duration-10 down-100%  "    :class="Enable_Z_index? 'z-40':'z-20'"   src="/images/leg_right.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[6.3dvw]  object-contain  mb-[6.5dvw] fixed  xyz-in ">
+        <img ref="leg_right" xyz="fade duration-10 down-100%  "    :class="Enable_Z_index? 'z-40':'z-20'"   src="/images/leg_right.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[6.2dvw]  object-contain  mb-[6.3dvw] fixed  xyz-in ">
         <img ref="leg_right_back" xyz="fade duration-10 down-100%  "  src="/images/leg_right_back.png"   alt="img_robot" class="w-[100dvw] h-[11dvh] object-center-bottom  left-[0] ml-[2dvw]  object-contain  mb-[7dvw] fixed z-30 xyz-in ">
 
         <img ref="leg_left_back" xyz="fade duration-10 down-100%    "  src="/images/leg_left_back.png"   alt="img_robot" class="w-[100dvw] h-[16dvh] object-center-bottom  right-[0] mr-[6.3dvw]  object-contain  mb-[6.8dvw] fixed z-30 xyz-in  ">
