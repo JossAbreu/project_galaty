@@ -46,7 +46,7 @@ setTimeout(() => {
     });
     anime({
       targets: [leg_right.value],
-      translateY: 10,
+      translateY: 17,
       translateX: -10,
       rotate: 7,
       duration: 2000,
@@ -101,12 +101,12 @@ Enable_Z_index.value = true;
 setTimeout(() => {
     ObjectsEnable.value = true;
     setTimeout(() => {
-        randomValues(Img_f2.value);
-        randomValues(Img_f1.value);
+        randomValues(Img_f2.value, 3000);  // Duración de 4000 ms para Img_f2
+        randomValues(Img_f1.value, 4000);  // Duración de 3000 ms para Img_f1
     }, 1000);
 }, 800);
 
-function randomValues(target) {
+function randomValues(target, duration) {
     anime({
         targets: [target],
         translateX: function() {
@@ -116,13 +116,12 @@ function randomValues(target) {
             return anime.random(0, 270);
         },
         easing: 'easeInOutQuad',
-        duration: 4000,
+        duration: duration,  // Duración específica proporcionada como parámetro
         complete: function() {
-            randomValues(target);
+            randomValues(target, duration);  // Llama recursivamente con la misma duración
         }
     });
 }
-
 
 
 
@@ -145,15 +144,15 @@ function randomValues(target) {
     />
       
       <span  class="fixed flex justify-end items-end w-full h-full    z-40 ">
-        <img ref="head"  xyz="fade duration-10 down-100%   "  src="/images/head.png"   alt="img_robot" class="w-[100dvw] h-[37dvh] object-center-bottom    object-contain mb-[12.9dvw] fixed z-0 xyz-in  ">
-        <img ref="body" xyz="fade duration-10 down-100%   " src="/images/body.png"  alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[1.2dvw]  object-contain  mb-[7.2dvw] fixed z-30  xyz-in ">
-        <img ref="leg_left" xyz="fade duration-10 down-100%    "   :class="Enable_Z_index? 'z-50':'z-30'"   src="/images/leg_left.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  right-[0] mr-[2.2dvw]  object-contain  mb-[7.3dvw] fixed xyz-in  ">
-        <img ref="leg_right" xyz="fade duration-10 down-100%  "    :class="Enable_Z_index? 'z-50':'z-30'"   src="/images/leg_right.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[6.5dvw]  object-contain  mb-[6.3dvw] fixed z-40  xyz-in ">
+        <img ref="head"  xyz="fade duration-10 down-100%   "  src="/images/head.png"   alt="img_robot" class="w-[100dvw] h-[37dvh] object-center-bottom    object-contain mb-[12.7dvw] fixed z-0 xyz-in  ">
+        <img ref="body" xyz="fade duration-10 down-100%   " src="/images/body.png"  alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[1.2dvw]  object-contain  mb-[7.2dvw] fixed z-50  xyz-in ">
+        <img ref="leg_left" xyz="fade duration-10 down-100%    "   :class="Enable_Z_index? 'z-50':'z-30'"   src="/images/leg_left.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  right-[0] mr-[2dvw]  object-contain  mb-[7.4dvw] fixed xyz-in  ">
+        <img ref="leg_right" xyz="fade duration-10 down-100%  "    :class="Enable_Z_index? 'z-40':'z-20'"   src="/images/leg_right.png"   alt="img_robot" class="w-[100dvw] h-[19dvh] object-center-bottom  left-[0] ml-[6.3dvw]  object-contain  mb-[6.5dvw] fixed  xyz-in ">
         <img ref="leg_right_back" xyz="fade duration-10 down-100%  "  src="/images/leg_right_back.png"   alt="img_robot" class="w-[100dvw] h-[11dvh] object-center-bottom  left-[0] ml-[2dvw]  object-contain  mb-[7dvw] fixed z-30 xyz-in ">
 
-        <img ref="leg_left_back" xyz="fade duration-10 down-100%    "  src="/images/leg_left_back.png"   alt="img_robot" class="w-[100dvw] h-[16dvh] object-center-bottom  right-[0] mr-[6.8dvw]  object-contain  mb-[6.8dvw] fixed z-30 xyz-in  ">
+        <img ref="leg_left_back" xyz="fade duration-10 down-100%    "  src="/images/leg_left_back.png"   alt="img_robot" class="w-[100dvw] h-[16dvh] object-center-bottom  right-[0] mr-[6.3dvw]  object-contain  mb-[6.8dvw] fixed z-30 xyz-in  ">
 
-        <img ref="Img_base"  src="/images/base.png" alt="img_base" xyz="fade duration-6 down-100% small-100% " class="w-[100dvw] h-[100dvh] object-center-bottom   self-end  object-contain  fixed  z-40 xyz-in ">
+        <img ref="Img_base"  src="/images/base.png" alt="img_base" xyz="fade duration-6 down-100% small-100% " class="w-[100dvw] h-[100dvh] object-center-bottom   self-end  object-contain  fixed  z-30 xyz-in ">
       </span>
     
       <img ref="Img_f1" v-if="ObjectsEnable" xyz="fade duration-30 down-100% back-5 small-75%" src="/images/f1.png" alt="img_f1" class="w-[100dvw] h-[30dvh] object-left-top mb-[25dvw] ml-[35dvw] object-contain  fixed z-30 xyz-in">
