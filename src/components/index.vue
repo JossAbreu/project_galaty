@@ -22,6 +22,7 @@ particlesJS.load('particles-js', '/particles.json', function() {
   console.log('callback - particles-js config loaded');
 });
 
+
 setTimeout(() => {
   
  
@@ -95,44 +96,32 @@ setTimeout(() => {
     });
 Enable_Z_index.value = true;
 }, 2000);
+
+
 setTimeout(() => {
-    ObjectsEnable.value = true
+    ObjectsEnable.value = true;
     setTimeout(() => {
-      function randomValues() {
-  anime({
-    targets: [Img_f2.value],
-    translateX: function() {
-      return anime.random(0, -370);
-    },
-    translateY: function() {
-      return anime.random(0, 270);
-    },
-    easing: 'easeInOutQuad',
-    duration: 4000,
-    complete: randomValues
-  });
-
-  anime({
-      targets: [Img_f1.value],
-      translateX: function() {
-      return anime.random(0, 370);
-    },
-    translateY: function() {
-      return anime.random(0, 270);
-    },
-    easing: 'easeInOutQuad',
-    duration: 4000,
-    complete: randomValues
-    });
-    
-}
-
-randomValues();
-     
-   
+        randomValues(Img_f2.value);
+        randomValues(Img_f1.value);
     }, 1000);
-   
-  }, 800);
+}, 800);
+
+function randomValues(target) {
+    anime({
+        targets: [target],
+        translateX: function() {
+            return anime.random(0, -370);
+        },
+        translateY: function() {
+            return anime.random(0, 270);
+        },
+        easing: 'easeInOutQuad',
+        duration: 4000,
+        complete: function() {
+            randomValues(target);
+        }
+    });
+}
 
 
 
