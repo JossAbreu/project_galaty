@@ -152,7 +152,7 @@ function randomValues(target, duration) {
 
         <img ref="leg_left_back" xyz="fade duration-10 down-100%    "  src="/images/leg_left_back.png"   alt="img_robot" class="w-[100dvw] h-[16dvh] object-center-bottom  right-[0] mr-[6.3dvw]  object-contain  mb-[6.8dvw] fixed z-30 xyz-in  ">
 
-        <img ref="Img_base"  src="/images/base.png" alt="img_base" xyz="fade duration-6 down-100% small-100% " class="w-[100dvw] h-[100dvh] object-center-bottom   self-end  object-contain  fixed  z-30 xyz-in ">
+        <img ref="Img_base"  src="/images/img_base.png" alt="img_base" xyz="fade duration-6 down-100% small-100% " class="w-[100dvw] h-[100dvh] object-center-bottom   self-end  object-contain  fixed  z-30 xyz-in ">
       </span>
     
       <img ref="Img_f1" v-if="ObjectsEnable" xyz="fade duration-30 down-100% back-5 small-75%" src="/images/f1.png" alt="img_f1" class="w-[100dvw] h-[30dvh] object-left-top mb-[25dvw] ml-[35dvw] object-contain  fixed z-30 xyz-in">
