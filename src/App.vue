@@ -9,8 +9,10 @@ import "tippy.js/animations/scale-extreme.css";
 </script>
 
 <template>
-
+<div class="overflow-hidden  ">
   <Index />
+</div>
+
 
 
 </template>
